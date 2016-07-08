@@ -17,14 +17,17 @@ function onLoaded(args) {
     var page = args.object;
     var searchbarElement = page.getViewById("searchBar2");
     searchbarElement.dismissSoftInput();
+    if (platform_1.isAndroid) {
+        searchbarElement.android.clearFocus();
+    }
 }
 exports.onLoaded = onLoaded;
 function searchbarloaded(args) {
     console.log("search loaded");
     var searchbar2 = args.object;
+    //do not clear focus
     searchbar2.dismissSoftInput();
-    if (platform_1.isAndroid) {
-    }
+    //only with native code - focus clear
     if (platform_1.isIOS) {
         searchbar2.ios.endEditing(true);
     }

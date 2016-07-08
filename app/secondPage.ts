@@ -22,22 +22,21 @@ export function onLoaded(args: EventData){
     console.log("on loaded event");
      var page = <Page>args.object;
     var searchbarElement = <SearchBar>page.getViewById("searchBar2");
+    //do not clear focus
     searchbarElement.dismissSoftInput();
+    //only with native code - focus clear
+    // if(isAndroid){
+    //     searchbarElement.android.clearFocus();
+    // }
 }
 
 
 export function searchbarloaded(args:EventData){
     console.log("search loaded");
     var searchbar2:SearchBar =<SearchBar> args.object;
-    //do not clear focus
+    
     searchbar2.dismissSoftInput();
-    //only with native code - focus clear
-    if(isAndroid){
-        searchbar2.android.clearFocus();
-    }
-    if(isIOS){
-        searchbar2.ios.endEditing(true);
-    }
+    
 }
 
 export function onTap(args:EventData) {
