@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <SearchBar id="searchBar" hint="Search" text=""  submit="onSubmit" focus="false" />
+    <Label text="Tap the button" class="title"/>
+    <TextField id="textFieldId" hint="Enter text" text="{{ textfield }}" />
+    <Button text="TapToHideKB" tap="onTap" />
+    <Button text="Go to next page" tap="nextPage" />
+    
+  </StackLayout>
+</Page>

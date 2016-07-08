@@ -1,0 +1,7 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <StackLayout>
+        <SearchBar id="searchBar2" hint="Search" text="" submit="onSubmit2" loaded="searchbarloaded"/>
+        <TextField loaded="textFieldLoaded" hint="some text" text="" id="textFieldId2"/>
+        <Button text="hide keyboard" tap="onTap" />    
+    </StackLayout>
+</Page>
